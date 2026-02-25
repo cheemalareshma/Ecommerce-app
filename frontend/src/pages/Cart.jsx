@@ -8,6 +8,7 @@ import CartTotal from '../components/CartTotal';
   const {products,currency,cartItems,updateQuantity,navigate}=useContext(ShopContext);
   const [cartData,setCartData]=useState([]);
   useEffect(()=>{
+    if(products.length>0){
    const tempData=[];
    for(const items in cartItems){
     for(const item in cartItems[items]){
@@ -21,7 +22,8 @@ import CartTotal from '../components/CartTotal';
     }
    }
    setCartData(tempData);
-  },[cartItems])
+  }
+  },[cartItems,products])
   return (
     <div className='border-t pt-14'>
       <div className='text-2xl mb-3'>

@@ -55,7 +55,7 @@ const Collection = () => {
  }
   useEffect(()=>{
    applyFilter();
-  },[category,subCategory,search,showSearch])
+  },[category,subCategory,search,showSearch,products])
  useEffect(()=>{
   sortProducts();
  },[sortType])
@@ -69,30 +69,30 @@ const Collection = () => {
         {/* category filters*/}
         <div className={`border border-gray-300 pl-5 py-3 mt-6 ${showFilters?'':'hidden'} sm:block`}>
           <p className='mb-3 text-sm font-medium'>CATEGORIES</p>
-          <div className='flex flex-col gap-2 text-sm font-light text-gary-700'>
+          <div className='flex flex-col gap-2 text-sm font-light text-gray-700'>
             <p className='flex gap-2'>
-              <input className='w-3' type='checkbox' value={'Men'} onChange={toggleCategory}/>Men
+              <input className='w-3' type='checkbox' value={'men'} onChange={toggleCategory}/>Men
             </p>
             <p className='flex gap-2'>
-              <input className='w-3' type='checkbox' value={'Women'} onChange={toggleCategory}/>Women
+              <input className='w-3' type='checkbox' value={'women'} onChange={toggleCategory}/>Women
             </p>
             <p className='flex gap-2'>
-              <input className='w-3' type='checkbox' value={'Kids'} onChange={toggleCategory}/>Kids
+              <input className='w-3' type='checkbox' value={'kids'} onChange={toggleCategory}/>Kids
             </p>
           </div>
         </div>
         {/* subcategories filters*/}
         <div className={`border border-gray-300 pl-5 py-3 my-5 ${showFilters?'':'hidden'} sm:block`}>
           <p className='mb-3 text-sm font-medium'>TYPE</p>
-          <div className='flex flex-col gap-2 text-sm font-light text-gary-700'>
+          <div className='flex flex-col gap-2 text-sm font-light text-gray-700'>
             <p className='flex gap-2'>
               <input className='w-3' type='checkbox' value={'Topwear'} onChange={toggleSubCategory}/>Topwear
             </p>
             <p className='flex gap-2'>
-              <input className='w-3' type='checkbox' value={'Bottomwear'}  onChange={toggleSubCategory}/>Bottomwear
+              <input className='w-3' type='checkbox' value={'bottomwear'}  onChange={toggleSubCategory}/>Bottomwear
             </p>
             <p className='flex gap-2'>
-              <input className='w-3' type='checkbox' value={'Winterwear'}  onChange={toggleSubCategory}/>Winterwear
+              <input className='w-3' type='checkbox' value={'winterwear'}  onChange={toggleSubCategory}/>Winterwear
             </p>
           </div>
         </div>
@@ -103,7 +103,7 @@ const Collection = () => {
             <Title text1={'ALL'} text2={'COLLECTIONS'}/>
             {/* product sort*/}
             <select onChange={(e)=>setSortType(e.target.value)} className='border border-gary-300 text-sm px-2'>
-              <option value="relavant">Sort by:Relevant</option>
+              <option value="relevant">Sort by:Relevant</option>
               <option value="low-high">Sort by:Low to High</option>
               <option value="high-low">Sort by:High to Low</option>
             </select>

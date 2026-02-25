@@ -5,4 +5,5 @@ export default defineConfig({
   plugins: [
     React()
   ],
+  server:{port:5173}
 })
