@@ -97,9 +97,6 @@ res.json({success:false,message:error.message})
 }
 //placing order using razorpay
 
-const placeOrderRazorpay=async(req,res)=>{
-    
-}
 //all orders data for admin panel
 const allOrders=async(req,res)=>{
 try{
@@ -136,4 +133,4 @@ res.json({success:false,message:error.message})
 
 }
 }
-export {verifyStripe,placeOrder,placeOrderRazorpay,placeOrderStripe,allOrders,userOrders,updateStatus}
+export {verifyStripe,placeOrder,placeOrderStripe,allOrders,userOrders,updateStatus}
